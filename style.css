@@ -1,0 +1,159 @@
+/* General body styling */
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url('background2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Navbar styling */
+.navbar {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    left: 10rem;
+    padding-left: 2rem;
+}
+
+.navbar .lists {
+    padding-right: 2rem;
+}
+
+.navbar .links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    color: floralwhite;
+    font-size: medium;
+}
+
+.navbar .links a {
+    color: floralwhite;
+    text-decoration: none;
+    font-size: large;
+}
+
+/* Main content box styling */
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(16, 15, 12);
+    background: floralwhite;
+    padding: 20px;
+    width: 400px; /* Increased width for more space */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Input and button arrangement styling */
+.actions_text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.actions_text input {
+    padding: 10px;
+    width: 70%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.actions_text button {
+    padding: 10px;
+    background: orange;
+    color: floralwhite;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    width: 25%; /* Button takes 25% of the row */
+}
+
+/* List container styling */
+.container ul {
+    list-style: none;
+    margin-top: 20px;
+    padding-left: 0;
+}
+
+/* List item styling */
+.container ul li {
+    background-color: floralwhite;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Checkbox styling */
+.container ul li .task-checkBox {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+/* Task text styling */
+.container ul li span {
+    flex-grow: 1;
+    text-align: left;
+}
+
+/* Completed task styling */
+.container ul li.completed span {
+    text-decoration: line-through;
+    color: grey;
+}
+
+/* Delete button styling */
+.container ul li .delete-btn {
+    background-color: red;
+    color: rgb(15, 15, 15);
+    border: none;
+    border-radius: 5px;
+    padding: 6px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Align the trash icon vertically */
+    justify-content: center;
+}
+
+.container ul li .delete-btn i {
+    font-size: 16px;
+}
+
+/* Delete button hover effect */
+.container ul li .delete-btn:hover {
+    background: transparent;
+    border: solid 1px red;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 500px) {
+    .main {
+        width: 90%;
+    }
+
+    .actions_text input {
+        width: 65%;
+    }
+
+    .actions_text button {
+        width: 30%;
+    }
+}
